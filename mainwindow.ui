@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1237</width>
+    <height>944</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color:#1d1d1d;
+}
+
+QDialog{
+background-color:#1d1d1d;
+}
+
+QFileDialog{
+background-color: #1d1d1d;
+}
+
+QInputDialog{
+background-color: #1d1d1d;
+}
+
+QWidget{
+background-color: #1d1d1d;
+}
+
+QMenuBar{
+background-color:#1d1d1d;
+padding:5px;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QMenuBar::item{
+background-color:#1d1d1d;
+color:#fff;
+padding:5px;
+}
+
+QMenu{
+color:#fff;
+padding:0;
+}
+
+QMenu::item:selected{
+color:#fff;
+background-color:#00aba9;
+}
+
+QSplitter::handle{
+background-color: #1d1d1d;
+}
+
+QTableWidget{
+background-color:#3d3d3d;
+color:#fff;
+border-radius: 4px;
+}
+
+QHeaderView::section{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(20, 100, 150, 255), stop:1 rgba(36, 100, 150, 255));
+border:none;
+border-top-style:solid;
+border-width:1px;
+border-top-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(20, 100, 150, 255), stop:1 rgba(36, 100, 150, 255));
+color:#fff;
+
+}
+QHeaderView{
+background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(20, 100, 150, 255), stop:1 rgba(36, 100, 150, 255));
+
+border:none;
+border-top-style:solid;
+border-width:1px;
+border-top-color:#146496;
+color:#fff;
+	font: 75 12pt &quot;Calibri&quot;;
+}
+
+QTableCornerButton::section{
+border:none;
+background-color:#146496;
+}
+
+QListWidget{
+background-color:#3d3d3d;
+color:#fff;
+border-radius: 8px;
+}
+
+QMenu{
+background-color:#3d3d3d;
+}
+
+QStatusBar{
+background-color:#7e3878;
+color:#fff;
+}
+
+QPushButton{
+min-width: 80px;
+min-height: 30px;
+
+border-style:solid;
+
+background-color:#3d3d3d;
+color:#fff;
+border-radius:7px;
+}
+
+QPushButton:hover{
+color:#ccc;
+	background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.517, y2:1, stop:0 rgba(45, 45, 45, 255), stop:0.505682 rgba(45, 45, 45, 255), stop:1 rgba(29, 29, 29, 255));
+	border-color:#2d89ef;
+border-width:2px;
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.517, y2:1, stop:0 rgba(29, 29, 29, 255), stop:0.505682 rgba(45, 45, 45, 255), stop:1 rgba(29, 29, 29, 255));
+}
+
+
+QTabWidget::tab{
+background-color:#3d3d3d;
+}
+
+QLineEdit{
+border-radius:0;
+color: #fff;
+}
+
+QProgressBar{
+border-radius:0;
+text-align:center;
+color:#fff;
+background-color:transparent;
+border: 2px solid #e3a21a;
+border-radius:7px;
+	font: 75 12pt &quot;Open Sans&quot;;
+
+}
+
+QProgressBar::chunk{
+background-color:#2d89ef;
+width:20px;
+}
+
+QComboBox{
+background-color: #3d3d3d;
+color: #fff;
+}
+
+QComboBox QAbstractItemView{
+background-color: #3d3d3d;
+color: #fff;
+}
+
+QTextBrowser{
+background-color: #3d3d3d;
+color: #fff;
+border-radius: 8px;
+}
+
+QSpinBox{
+background-color: #3d3d3d;
+color: #fff;
+font: 16pt
+}
+
+QLabel{
+color: #fff;
+}
+
+QCheckBox{
+color: #fff;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+    </font>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>8</y>
+         <width>1203</width>
+         <height>831</height>
+        </rect>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>283</x>
+          <y>9</y>
+          <width>921</width>
+          <height>821</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="12" column="0">
+          <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Beatable Level</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="3">
+          <widget class="QTextBrowser" name="FarmingInstructions"/>
+         </item>
+         <item row="2" column="3">
+          <widget class="QComboBox" name="userServantClasses"/>
+         </item>
+         <item row="12" column="2" colspan="2">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="QuitButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Quit Program</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="3" rowspan="5">
+          <widget class="QListWidget" name="listWidget"/>
+         </item>
+         <item row="4" column="0" colspan="3">
+          <widget class="QPushButton" name="AdjustMatsOwned">
+           <property name="text">
+            <string>Adjust Selected Materials</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="3">
+          <widget class="QPushButton" name="SetGoals">
+           <property name="text">
+            <string>Set Selected Servants Goals</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="3">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="AddButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="RemoveButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Remove</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="0" colspan="3">
+          <widget class="QPushButton" name="ModifyServant">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Modify Servant</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" rowspan="6" colspan="3">
+          <widget class="QTableWidget" name="MaterialsList">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>192</height>
+            </size>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="autoScroll">
+            <bool>false</bool>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="columnCount">
+            <number>3</number>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>70</number>
+           </attribute>
+           <attribute name="verticalHeaderDefaultSectionSize">
+            <number>30</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Bones</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/FGO_Mats/Evil Bone.png</normaloff>:/FGO_Mats/Evil Bone.png</iconset>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Dust</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Proof</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Fang</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Lantern</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Seed</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Crystals</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Plume</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Jewel</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Baby</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Magical Cerebrospinal Fluid</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Page</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Gear</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Scale</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Talon</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Heart</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string/>
+            </property>
+           </column>
+           <column/>
+           <column/>
+           <item row="0" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsSelectable|ItemIsEditable|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="4" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="5" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="6" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="7" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="8" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="9" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="10" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="11" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="12" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="13" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="14" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="15" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="12" column="1">
+          <widget class="QSpinBox" name="chooseRecommendedLevel">
+           <property name="maximum">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>260</width>
+          <height>821</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="profileName">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>Profile Name</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="wordWrap">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QComboBox" name="Classes"/>
+           </item>
+           <item>
+            <widget class="QListWidget" name="Servants"/>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="Display"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1237</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Profile"/>
+    <addaction name="actionSave_Profile"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionSingularity"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew_Profile">
+   <property name="text">
+    <string>New/Load Profile</string>
+   </property>
+  </action>
+  <action name="actionSave_Profile">
+   <property name="text">
+    <string>Save Profile</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionSingularity">
+   <property name="text">
+    <string>Singularity</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>RemoveButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MaterialsList</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>444</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

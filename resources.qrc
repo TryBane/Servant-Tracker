@@ -1,0 +1,145 @@
+<RCC>
+    <qresource prefix="/">
+        <file>FGO_Mats/Bizarre Godly Wine.png</file>
+        <file>FGO_Mats/Black Tallow.png</file>
+        <file>FGO_Mats/Bloodstone Tear.png</file>
+        <file>FGO_Mats/Chains of the Fool.png</file>
+        <file>FGO_Mats/Claw of Chaos.png</file>
+        <file>FGO_Mats/Cursed Beast Cholecyst.png</file>
+        <file>FGO_Mats/Dragon Fang.png</file>
+        <file>FGO_Mats/Dragon's Reverse Scale.png</file>
+        <file>FGO_Mats/Eternal Gear.png</file>
+        <file>FGO_Mats/Evil Bone.png</file>
+        <file>FGO_Mats/Forbidden Page.png</file>
+        <file>FGO_Mats/Ghost Lantern.png</file>
+        <file>FGO_Mats/Heart of the Foreign God.png</file>
+        <file>FGO_Mats/Homunculus Baby.png</file>
+        <file>FGO_Mats/Kotan Magatama.png</file>
+        <file>FGO_Mats/Lamp of Demon Sealing.png</file>
+        <file>FGO_Mats/Medal of Great Knight.png</file>
+        <file>FGO_Mats/Meteor Horseshoe.png</file>
+        <file>FGO_Mats/Night-Weeping Iron Stake.png</file>
+        <file>FGO_Mats/Octuplet Crystals.png</file>
+        <file>FGO_Mats/Phoenix Feather.png</file>
+        <file>FGO_Mats/Primordial Lanugo.png</file>
+        <file>FGO_Mats/Proof of Hero.png</file>
+        <file>FGO_Mats/Scarab of Wisdom.png</file>
+        <file>FGO_Mats/Seashell of Reminiscence.png</file>
+        <file>FGO_Mats/Seed of Yggdrasil.png</file>
+        <file>FGO_Mats/Serpent Jewel.png</file>
+        <file>FGO_Mats/Spirit Root.png</file>
+        <file>FGO_Mats/Stinger of Certain Death.png</file>
+        <file>FGO_Mats/Void's Dust.png</file>
+        <file>FGO_Mats/Warhorse's Immature Horn.png</file>
+        <file>FGO_Mats/Magical Cerebrospinal Fluid.png</file>
+        <file>Servant_Images/Alexander.png</file>
+        <file>Servant_Images/Altera.png</file>
+        <file>Servant_Images/Altoria Pendragon (Santa Alter).png</file>
+        <file>Servant_Images/Anne Bonny &amp; Mary Read.png</file>
+        <file>Servant_Images/Arash.png</file>
+        <file>Servant_Images/Arjuna.png</file>
+        <file>Servant_Images/Artoria Pendragon (Alter).png</file>
+        <file>Servant_Images/Artoria Pendragon (Lancer Alter).png</file>
+        <file>Servant_Images/Artoria Pendragon (Lily).png</file>
+        <file>Servant_Images/Artoria Pendragon.png</file>
+        <file>Servant_Images/Asterios.png</file>
+        <file>Servant_Images/Atalanta.png</file>
+        <file>Servant_Images/Beowulf.png</file>
+        <file>Servant_Images/Boudica.png</file>
+        <file>Servant_Images/Brynhildr.png</file>
+        <file>Servant_Images/Caligula.png</file>
+        <file>Servant_Images/Carmilla.png</file>
+        <file>Servant_Images/Chares-Henri Sanson.png</file>
+        <file>Servant_Images/Charles Babbage.png</file>
+        <file>Servant_Images/Chevalier d'Eon.png</file>
+        <file>Servant_Images/Cu Chulainn (Caster).png</file>
+        <file>Servant_Images/Cu Chulainn (Prototype).png</file>
+        <file>Servant_Images/Cu Chulainn.png</file>
+        <file>Servant_Images/Cursed Arm Hassan.png</file>
+        <file>Servant_Images/Darius III.png</file>
+        <file>Servant_Images/David.png</file>
+        <file>Servant_Images/Diarmuid Ua Duibhne.png</file>
+        <file>Servant_Images/Edward Teach.png</file>
+        <file>Servant_Images/Elizabeth Bathory (Halloween).png</file>
+        <file>Servant_Images/Elizabeth Bathory.png</file>
+        <file>Servant_Images/Emiya.png</file>
+        <file>Servant_Images/Eric Bloodaxe.png</file>
+        <file>Servant_Images/Euryale.png</file>
+        <file>Servant_Images/Fergus mac Roich.png</file>
+        <file>Servant_Images/Fionn mac Cumhaill.png</file>
+        <file>Servant_Images/Francis Drake.png</file>
+        <file>Servant_Images/Frankenstein.png</file>
+        <file>Servant_Images/Gaius Julius Caesar.png</file>
+        <file>Servant_Images/Gilgamesh.png</file>
+        <file>Servant_Images/Gilles de Rais (Caster).png</file>
+        <file>Servant_Images/Gilles de Rais.png</file>
+        <file>Servant_Images/Hans Christian Andersen.png</file>
+        <file>Servant_Images/Hector.png</file>
+        <file>Servant_Images/Henry Jekyll &amp; Hyde.png</file>
+        <file>Servant_Images/Heracles.png</file>
+        <file>Servant_Images/Jack the Ripper.png</file>
+        <file>Servant_Images/Jeanne d'Arc.png</file>
+        <file>Servant_Images/Jing Ke.png</file>
+        <file>Servant_Images/Karna.png</file>
+        <file>Servant_Images/Kiyohime.png</file>
+        <file>Servant_Images/Lancelot.png</file>
+        <file>Servant_Images/Leonidas.png</file>
+        <file>Servant_Images/Lu Bu.png</file>
+        <file>Servant_Images/Marie Antoinette.png</file>
+        <file>Servant_Images/Mata Hari.png</file>
+        <file>Servant_Images/Medea (Lily).png</file>
+        <file>Servant_Images/Medea.png</file>
+        <file>Servant_Images/Medusa.png</file>
+        <file>Servant_Images/Mephistopheles.png</file>
+        <file>Servant_Images/Mordred.png</file>
+        <file>Servant_Images/Musashibou Benkei.png</file>
+        <file>Servant_Images/Mysterious Heroine X.png</file>
+        <file>Servant_Images/Nero Claudius (Bride).png</file>
+        <file>Servant_Images/Nero Claudius.png</file>
+        <file>Servant_Images/Nikola Tesla.png</file>
+        <file>Servant_Images/Nursery Rhyme.png</file>
+        <file>Servant_Images/Oda Nobunaga.png</file>
+        <file>Servant_Images/Okita Souji.png</file>
+        <file>Servant_Images/Orion.png</file>
+        <file>Servant_Images/Paracelsus von Hohenheim.png</file>
+        <file>Servant_Images/Robin Hood.png</file>
+        <file>Servant_Images/Romulus.png</file>
+        <file>Servant_Images/Ryougi Shiki (Saber).png</file>
+        <file>Servant_Images/Ryougi Shiki.png</file>
+        <file>Servant_Images/Saint George.png</file>
+        <file>Servant_Images/Saint Martha.png</file>
+        <file>Servant_Images/Sakata Kintoki.png</file>
+        <file>Servant_Images/Sasaki Kojiro.png</file>
+        <file>Servant_Images/Scathach.png</file>
+        <file>Servant_Images/Siegfried.png</file>
+        <file>Servant_Images/Spartacus.png</file>
+        <file>Servant_Images/Stheno.png</file>
+        <file>Servant_Images/Tamamo Cat.png</file>
+        <file>Servant_Images/Tamamo no Mae.png</file>
+        <file>Servant_Images/The Phantom of the Opera.png</file>
+        <file>Servant_Images/Ushiwakamaru.png</file>
+        <file>Servant_Images/Vlad III.png</file>
+        <file>Servant_Images/William Shakespeare.png</file>
+        <file>Servant_Images/Wolfgang Amadeus Mozart.png</file>
+        <file>Servant_Images/Zhuge Liang (Lord El-Melloi II).png</file>
+        <file>Singularity_Images/Fuyuki_Ascension_Item_Map.png</file>
+        <file>Singularity_Images/London_Ascension_Item_Map.png</file>
+        <file>Singularity_Images/Okeanos_Ascension_Item_Map.png</file>
+        <file>Singularity_Images/Orleans_Ascension_Item_Map.png</file>
+        <file>Singularity_Images/America_Ascension_Item_Map.png</file>
+        <file>Singularity_Images/Septem_Ascension_Item_Map.png</file>
+        <file>Servant_Images/Mashu Kyrielight.png</file>
+        <file>Servant_Images/Thomas Edison.png</file>
+        <file>Servant_Images/Amakusa Shirou.png</file>
+        <file>Servant_Images/Cu Chulainn (Alter).png</file>
+        <file>Servant_Images/Edmond Dantes.png</file>
+        <file>Servant_Images/Emiya (Assassin).png</file>
+        <file>Servant_Images/Gilgamesh (Child).png</file>
+        <file>Servant_Images/Helena Blavatsky.png</file>
+        <file>Servant_Images/Li Shuwen (Lancer).png</file>
+        <file>Servant_Images/Medb.png</file>
+        <file>Servant_Images/Nightingale.png</file>
+        <file>Servant_Images/Rama.png</file>
+        <file>Servant_Images/Astolfo.png</file>
+    </qresource>
+</RCC>
