@@ -260,7 +260,15 @@ color: #fff;
          <item row="12" column="2" colspan="2">
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QPushButton" name="CalculateFarming">
+               <property name="text">
+                <string>Calculate Farming Instructions</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
            <item>
             <widget class="QPushButton" name="QuitButton">

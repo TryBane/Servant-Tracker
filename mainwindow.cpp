@@ -1333,8 +1333,8 @@ void MainWindow::updateResources()
         }
     }
 
-    std::vector< QString > resources;
-    std::vector< float > totalMaterials;
+    resources.clear();
+    totalMaterials.clear();
 
     // Set resources and totalMaterials to reflect the materials in the list
     for( auto i = 1; i < 33; i++ )
@@ -1346,117 +1346,6 @@ void MainWindow::updateResources()
         }
     }
 
-    std::vector< FarmableNode > farmableNodes;
-
-    // Set farmableNodes to the series of nodes which meet the recommended level requirement
-    QStringList singularityList;
-
-    for( auto theNodes : nodes )
-    {
-        if( !singularityList.contains( theNodes.getSingularity() ) )
-        {
-            singularityList << theNodes.getSingularity();
-        }
-    }
-
-    for( auto allNodes : nodes )
-    {
-        if( allNodes.getRecommendedLevel() <= userProfile.recommendedLevel &&
-            singularityList.indexOf( userProfile.singularityChosen ) >= singularityList.indexOf( allNodes.getSingularity() ) )
-        {
-            farmableNodes.push_back( allNodes );
-        }
-    }
-
-    EfficientFarming farmingResources( resources,totalMaterials );
-    std::vector< QString > resourcesCanBeFarmed;
-    std::vector< QString > resourcesCantBeFarmed;
-
-    resourcesCantBeFarmed = farmingResources.calculateFarmingNode( farmableNodes,resourcesCanBeFarmed );
-
-    // Set up and display Farming Instructions
-    QString FarmingInstructions = "Farming Instructions: \n";
-
-    for( auto i = 0; i < farmingResources.whatNode().size(); i++ )
-    {
-        if( farmingResources.whatNode().size() == 1 )
-        {
-            FarmingInstructions += "Just farm " + farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " for all your resources and you'll be good.";
-        }
-        else if( i == 0 )
-        {
-            FarmingInstructions += "Farm these locations in this order for maximum efficiency:\n";
-            FarmingInstructions += farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " for " + resourcesCanBeFarmed[ i ] + "\n";
-        }
-        else if( i == farmingResources.whatNode().size() - 1 )
-        {
-            FarmingInstructions += farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " for the remainder of your resources. \n";
-        }
-        else
-        {
-            FarmingInstructions += farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " for " + resourcesCanBeFarmed[ i ] + "\n";
-        }
-    }
-
-    if( resourcesCantBeFarmed.size() > 0 )
-    {
-        FarmingInstructions += "Now unfortunately, based on your current restrictions or the availability of the materials\nthere aren't any nodes we could find to farm the following resources:\n";
-
-        for( auto cantFarm : resourcesCantBeFarmed )
-        {
-            FarmingInstructions += cantFarm + "\n";
-        }
-    }
-
-    //Set up and display Events in the Farming Instructions
-    if( events.size() > 0 )
-    {
-        for( auto theEvent : events )
-        {
-            FarmingInstructions += "\nThere is an event where you can farm some materials as well. \nThis event is: " + theEvent.getEventName() + "\nAnd you can farm: \n";
-
-            for( auto i = 1; i < 33; i++ )
-            {
-                if( theEvent.isFarmable( Material::TotalMaterialList( i ) ) )
-                {
-                    FarmingInstructions += Material::TotalMaterialList( i ) + "\n";
-                }
-            }
-
-            bool cantBeBought = true;
-
-            for( auto i = 1; i < 33; i++ )
-            {
-                if( ui->MaterialsList->item( i - 1,1 )->text() > 0 )
-                {
-                    Material checkMaterial( Material::TotalMaterialList( i ),-1 );
-                    if( checkMaterial.totalNeeded() != theEvent.isInTheShop( checkMaterial ).totalNeeded() )
-                    {
-                        if( cantBeBought )
-                        {
-                            cantBeBought = false;
-                            FarmingInstructions += "\nYou will also be able to buy some materials from the shop: \n";
-                        }
-                        FarmingInstructions += theEvent.isInTheShop( checkMaterial ).getName() + " for " + QString::number( theEvent.isInTheShop( checkMaterial ).totalMatsNeeded ) + " in all.\n";
-                    }
-                }
-            }
-
-            if( theEvent.doesItHaveLottery() )
-            {
-                FarmingInstructions += "\nThis event also has a lottery, which can be considered the best way to farm materials. Here are the materials: \n";
-
-                std::vector< Material > lotteryMaterials = theEvent.getLotteryMaterials();
-
-                for( auto theMaterials : lotteryMaterials )
-                {
-                    FarmingInstructions += theMaterials.getName() + " for " + QString::number( theMaterials.totalNeeded() ) + " each box\n";
-                }
-            }
-        }
-    }
-
-    ui->FarmingInstructions->setText( FarmingInstructions );
 }
 
 void MainWindow::calculateMaterials( Servant & servantModified )
@@ -1679,4 +1568,119 @@ void MainWindow::on_actionSingularity_triggered()
     ModifyDialog.exec();
 
     updateResources();
+}
+
+void MainWindow::on_CalculateFarming_clicked()
+{
+    std::vector< FarmableNode > farmableNodes;
+
+    // Set farmableNodes to the series of nodes which meet the recommended level requirement
+    QStringList singularityList;
+
+    for( auto theNodes : nodes )
+    {
+        if( !singularityList.contains( theNodes.getSingularity() ) )
+        {
+            singularityList << theNodes.getSingularity();
+        }
+    }
+
+    for( auto allNodes : nodes )
+    {
+        if( allNodes.getRecommendedLevel() <= userProfile.recommendedLevel &&
+            singularityList.indexOf( userProfile.singularityChosen ) >= singularityList.indexOf( allNodes.getSingularity() ) )
+        {
+            farmableNodes.push_back( allNodes );
+        }
+    }
+
+    EfficientFarming farmingResources( resources,totalMaterials );
+    std::vector< QString > resourcesCanBeFarmed;
+    std::vector< QString > resourcesCantBeFarmed;
+
+    resourcesCantBeFarmed = farmingResources.calculateFarmingNode( farmableNodes,resourcesCanBeFarmed );
+
+    // Set up and display Farming Instructions
+    QString FarmingInstructions = "Farming Instructions: \n";
+
+    for( auto i = 0; i < farmingResources.whatNode().size(); i++ )
+    {
+        if( farmingResources.whatNode().size() == 1 )
+        {
+            FarmingInstructions += "Just farm " + farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " (" + farmingResources.whatNode()[ i ].getAPCost() + ") for all your resources and you'll be good.";
+        }
+        else if( i == 0 )
+        {
+            FarmingInstructions += "Farm these locations in this order for maximum efficiency:\n";
+            FarmingInstructions += farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " (" + farmingResources.whatNode()[ i ].getAPCost() + ") for " + resourcesCanBeFarmed[ i ] + "\n";
+        }
+        else if( i == farmingResources.whatNode().size() - 1 )
+        {
+            FarmingInstructions += farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " (" + farmingResources.whatNode()[ i ].getAPCost() + ") for the remainder of your resources. \n";
+        }
+        else
+        {
+            FarmingInstructions += farmingResources.whatNode()[ i ].getSingularity() + ": " + farmingResources.whatNode()[ i ].getName() + " (" + farmingResources.whatNode()[ i ].getAPCost() + ") for " + resourcesCanBeFarmed[ i ] + "\n";
+        }
+    }
+
+    if( resourcesCantBeFarmed.size() > 0 )
+    {
+        FarmingInstructions += "Now unfortunately, based on your current restrictions or the availability of the materials\nthere aren't any nodes we could find to farm the following resources:\n";
+
+        for( auto cantFarm : resourcesCantBeFarmed )
+        {
+            FarmingInstructions += cantFarm + "\n";
+        }
+    }
+
+    //Set up and display Events in the Farming Instructions
+    if( events.size() > 0 )
+    {
+        for( auto theEvent : events )
+        {
+            FarmingInstructions += "\nThere is an event where you can farm some materials as well. \nThis event is: " + theEvent.getEventName() + "\nAnd you can farm: \n";
+
+            for( auto i = 1; i < 33; i++ )
+            {
+                if( theEvent.isFarmable( Material::TotalMaterialList( i ) ) )
+                {
+                    FarmingInstructions += Material::TotalMaterialList( i ) + "\n";
+                }
+            }
+
+            bool cantBeBought = true;
+
+            for( auto i = 1; i < 33; i++ )
+            {
+                if( ui->MaterialsList->item( i - 1,1 )->text() > 0 )
+                {
+                    Material checkMaterial( Material::TotalMaterialList( i ),-1 );
+                    if( checkMaterial.totalNeeded() != theEvent.isInTheShop( checkMaterial ).totalNeeded() )
+                    {
+                        if( cantBeBought )
+                        {
+                            cantBeBought = false;
+                            FarmingInstructions += "\nYou will also be able to buy some materials from the shop: \n";
+                        }
+                        FarmingInstructions += theEvent.isInTheShop( checkMaterial ).getName() + " for " + QString::number( theEvent.isInTheShop( checkMaterial ).totalMatsNeeded ) + " in all.\n";
+                    }
+                }
+            }
+
+            if( theEvent.doesItHaveLottery() )
+            {
+                FarmingInstructions += "\nThis event also has a lottery, which can be considered the best way to farm materials. Here are the materials: \n";
+
+                std::vector< Material > lotteryMaterials = theEvent.getLotteryMaterials();
+
+                for( auto theMaterials : lotteryMaterials )
+                {
+                    FarmingInstructions += theMaterials.getName() + " for " + QString::number( theMaterials.totalNeeded() ) + " each box\n";
+                }
+            }
+        }
+    }
+
+    ui->FarmingInstructions->setText( FarmingInstructions );
 }

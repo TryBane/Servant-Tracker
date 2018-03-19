@@ -80,6 +80,8 @@ private slots:
 
     void on_actionSingularity_triggered();
 
+    void on_CalculateFarming_clicked();
+
 public:
     QDir SaveFolder;
     Ui::MainWindow *ui;
@@ -92,6 +94,8 @@ public:
     std::vector< Profile > pastStates;
     std::vector< Profile > futureStates;
     std::vector< Event > events;
+    std::vector< QString > resources;
+    std::vector< float > totalMaterials;
     bool ServantsClicked = false;
     bool ChangesAvailable = false;
     bool MatsAdjustable = false;

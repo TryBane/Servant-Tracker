@@ -22,6 +22,7 @@ public:
     {
         return ( node1.second < node2.second );
     }
+    bool farmingNodes( std::vector< FarmableNode > theNodes,std::vector< QString > theMaterials,std::vector< FarmableNode > farmedNodes,std::vector< float > farmedMaterials,int apCost ,int & bestApCost );
 private:
     std::vector< FarmableNode > bestNodes;
     std::vector< QString > materials;
