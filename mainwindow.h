@@ -5,6 +5,7 @@
 #include "ui_mainwindow.h"
 #include <QString>
 #include <QDir>
+#include <unordered_map>
 #include "profile.h"
 #include "farmablenode.h"
 #include "event.h"
@@ -85,7 +86,8 @@ private slots:
 public:
     QDir SaveFolder;
     Ui::MainWindow *ui;
-    std::vector<Servant> servants;
+    std::unordered_map< std::string,std::unordered_map< std::string,Servant > > theServants;
+    std::vector< Servant > servants;
     std::vector<FarmableNode> nodes;
     QString SaveFolderString = "Servant Tracker Saves";
     QString DebugInfo = "";

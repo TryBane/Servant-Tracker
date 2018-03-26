@@ -5,7 +5,7 @@ Profile::Profile()
 
 }
 
-void Profile::addServant(Servant servant , std::string theName, std::string theClass)
+void Profile::addServant( Servant servant,std::string theName,std::string theClass )
 {
     servants.emplace( ( theClass, (theName,servant ) ) );
 }

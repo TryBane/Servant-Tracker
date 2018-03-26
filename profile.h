@@ -3,6 +3,7 @@
 #include <QString>
 #include <QVariant>
 #include <vector>
+#include <unordered_map>
 #include "servant.h"
 #include "efficientfarming.h"
 
@@ -10,7 +11,7 @@ class Profile
 {
 public:
     Profile();
-    void addServant( Servant newServant );
+    void addServant( Servant newServant,std::string theName,std::string theClass );
     void removeServant( Servant removedServant );
     Servant getLastServant();
     QString getServantList();
@@ -94,7 +95,7 @@ public:
     QString servantList;
     QString profileName;
     QString singularityChosen = "Fuyuki";
-    std::vector<Servant> servants;
+    std::unordered_map< std::string, std::unordered_map< std::string,Servant > > servants;
     std::vector<Material> ownedMaterialList;
     std::vector<Material> neededMaterialList;
     std::vector<Material> setMatGoals;

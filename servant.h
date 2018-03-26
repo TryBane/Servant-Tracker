@@ -6,15 +6,25 @@
 #include <map>
 #include "material.h"
 
+enum ServantClass{
+    Saber,
+    Archer,
+    Lancer,
+    Rider,
+    Caster,
+    Assassin,
+    Berserker,
+    Shielder,
+    Ruler,
+    Avenger
+};
+
 class Servant
 {
 public:
     Servant() = default;
-    Servant(QString ServantName, QString ServantClass, std::vector<Material> List,
-            qint32 Rank)
+    Servant(std::vector<Material> List,int Rank)
         :
-    name(ServantName),
-    servantClass(ServantClass),
     MaterialList(List),
     stars(Rank)
     {
@@ -62,25 +72,38 @@ public:
     std::vector<Material> getMaterialsList();
     std::vector<Material> getMaterialsUsed();
 
+    static QString getServantClass( ServantClass i )
+    {
+        switch( i )
+        {
+        case ServantClass::Saber:
+            return QString("Saber");
+        case ServantClass::Archer:
+            return QString("Archer");
+        case ServantClass::Lancer:
+            return QString("Lancer");
+        case ServantClass::Rider:
+            return QString("Rider");
+        case ServantClass::Caster:
+            return QString("Caster");
+        case ServantClass::Assassin:
+            return QString("Assassin");
+        case ServantClass::Berserker:
+            return QString("Berserker");
+        case ServantClass::Shielder:
+            return QString("Shielder");
+        case ServantClass::Ruler:
+            return QString("Ruler");
+        case ServantClass::Avenger:
+            return QString("Avenger");
+        default:
+            return QString("None");
+        }
+    }
+
     bool operator ==( Servant & rhs )
     {
-        return (
-                    this->ascension == rhs.ascension &&
-                    this->attackFou == rhs.attackFou &&
-                    this->favorite == rhs.favorite &&
-                    this->npLevel == rhs.npLevel &&
-                    this->hpFou == rhs.hpFou &&
-                    this->name == rhs.name &&
-                    this->skill1 == rhs.skill1 &&
-                    this->skill2 == rhs.skill2 &&
-                    this->skill3 == rhs.skill3 &&
-                    this->tracking == rhs.tracking &&
-                    this->goalLevel == rhs.goalLevel &&
-                    this->goalAscensionLevel == rhs.goalAscensionLevel &&
-                    this->goalSkill1 == rhs.goalSkill1 &&
-                    this->goalSkill2 == rhs.goalSkill2 &&
-                    this->goalSkill3 == rhs.goalSkill3
-                    );
+        return this->MaterialList == rhs.MaterialList;
     }
 
     qint32 stars = 0;
@@ -90,8 +113,6 @@ public:
     qint32 hpFou = 0;
     qint32 attackFou = 0;
 
-    QString name;
-    QString servantClass;
     std::vector<Material> MaterialList;
 
     int ascension1 = 20, ascension2 = 30, ascension3 = 40, ascension4 = 50;

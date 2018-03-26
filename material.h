@@ -2,6 +2,40 @@
 #define MATERIAL_H
 #include "QString"
 
+enum MaterialName{
+    Bone,
+    Dust,
+    Proof,
+    Fang,
+    Lantern,
+    Seed,
+    Crystals,
+    Feather,
+    Jewel,
+    Baby,
+    Horseshoe,
+    Page,
+    Gear,
+    Scale,
+    Claw,
+    Heart,
+    Tear,
+    Tallow,
+    Root,
+    Horn,
+    Chains,
+    Medal,
+    Lamp,
+    Scarab,
+    Seashell,
+    Stinger,
+    Lanugo,
+    Cholecyst,
+    Fluid,
+    Wine,
+    Kotan,
+    Stake
+};
 
 class Material
 {
@@ -35,73 +69,73 @@ public:
     QString getName();
     int getTotalMatsUsed();
 
-    static QString TotalMaterialList( qint32 slot )
+    static QString TotalMaterialList( MaterialName slot )
     {
         switch( slot )
         {
-        case 1:
+        case MaterialName::Bone:
             return "Evil Bone";
-        case 2:
+        case MaterialName::Dust:
             return "Void's Dust";
-        case 3:
+        case MaterialName::Proof:
             return "Proof of Hero";
-        case 4:
+        case MaterialName::Fang:
             return "Dragon Fang";
-        case 5:
+        case MaterialName::Lantern:
             return "Ghost Lantern";
-        case 6:
+        case MaterialName::Seed:
             return "Seed of Yggdrasil";
-        case 7:
+        case MaterialName::Crystals:
             return "Octuplet Crystals";
-        case 8:
+        case MaterialName::Feather:
             return "Phoenix Feather";
-        case 9:
+        case MaterialName::Jewel:
             return "Serpent Jewel";
-        case 10:
+        case MaterialName::Baby:
             return "Homunculus Baby";
-        case 11:
+        case MaterialName::Horseshoe:
             return "Meteor Horseshoe";
-        case 12:
+        case MaterialName::Page:
             return "Forbidden Page";
-        case 13:
+        case MaterialName::Gear:
             return "Eternal Gear";
-        case 14:
+        case MaterialName::Scale:
             return "Dragon's Reverse Scale";
-        case 15:
+        case MaterialName::Claw:
             return "Claw of Chaos";
-        case 16:
+        case MaterialName::Heart:
             return "Heart of the Foreign God";
-        case 17:
+        case MaterialName::Tear:
             return "Bloodstone Tear";
-        case 18:
+        case MaterialName::Tallow:
             return "Black Tallow";
-        case 19:
+        case MaterialName::Root:
             return "Spirit Root";
-        case 20:
+        case MaterialName::Horn:
             return "Warhorse's Immature Horn";
-        case 21:
+        case MaterialName::Chains:
             return "Chains of the Fool";
-        case 22:
+        case MaterialName::Medal:
             return "Medal of Great Knight";
-        case 23:
+        case MaterialName::Lamp:
             return "Lamp of Demon Sealing";
-        case 24:
+        case MaterialName::Scarab:
             return "Scarab of Wisdom";
-        case 25:
+        case MaterialName::Seashell:
             return "Seashell of Reminiscence";
-        case 26:
+        case MaterialName::Stinger:
             return "Stinger of Certain Death";
-        case 27:
+        case MaterialName::Lanugo:
             return "Primordial Lanugo";
-        case 28:
+        case MaterialName::Cholecyst:
             return "Cursed Beast Cholecyst";
-        case 29:
+        case MaterialName::Fluid:
             return "Magical Cerebrospinal Fluid";
-        case 30:
+        case MaterialName::Wine:
             return "Bizarre Godly Wine";
-        case 31:
+        case MaterialName::Kotan:
             return "Kotan Magatama";
-        case 32:
+        case MaterialName::Stake:
             return "Night-Weeping Iron Stake";
         default:
             return "Done";
